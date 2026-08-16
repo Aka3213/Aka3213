@@ -24,8 +24,8 @@ def main():
         clips.append(f'''<clipPath id="row{i}"><rect x="0" y="{i*CELL_H:.2f}" width="0" height="{CELL_H+1:.2f}"><animate attributeName="width" from="0" to="{WIDTH:.2f}" begin="{delay:.2f}s" dur="0.72s" fill="freeze"/></rect></clipPath><text x="0" y="{y:.2f}" clip-path="url(#row{i})">{escape(row)}</text>''')
     svg=f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH:.0f}" height="{HEIGHT:.0f}" viewBox="0 0 {WIDTH:.0f} {HEIGHT:.0f}">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<style>text{{font-family:"Courier New","Liberation Mono",monospace;font-size:{FONT_SIZE}px;font-weight:600;letter-spacing:0;fill:#4b5563;white-space:pre;}}</style>
+<rect width="100%" height="100%" fill="#0d1117"/>
+<style>text{{font-family:"Courier New","Liberation Mono",monospace;font-size:{FONT_SIZE}px;font-weight:600;letter-spacing:0;fill:#00f0ff;white-space:pre;}}</style>
 {''.join(clips)}
 </svg>'''
     Path("avi-ascii.svg").write_text(svg,encoding="utf-8")

@@ -4,7 +4,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 import json
 DATA=Path("data/contributions.json"); OUT=Path("contrib-heatmap.svg")
-PALETTE=["#ebedf0","#c6e48b","#7bc96f","#239a3b","#196127","#0b3d1e"]
+PALETTE=["#161b22","#4e036e","#8a2be2","#ff1493","#00ffff","#fdfd96"]
 CELL,GAP=11,3; STEP=CELL+GAP; LEFT,TOP=44,34; WEEKS,DAYS=53,7; WIDTH=LEFT+WEEKS*STEP+16; HEIGHT=TOP+DAYS*STEP+74
 def sunday(d): return d-timedelta(days=(d.weekday()+1)%7)
 def main():
@@ -19,12 +19,12 @@ def main():
     legend=''.join(f'<rect x="{WIDTH-170+i*23}" y="{HEIGHT-27}" width="12" height="12" rx="2" fill="{c}"/>' for i,c in enumerate(PALETTE))
     svg=f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
-<rect width="100%" height="100%" rx="12" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
+<rect width="100%" height="100%" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
 <text x="18" y="20" class="title">GitHub contribution activity</text>
 <text x="18" y="{TOP+DAYS*STEP+24}" class="stats">{escape(f"{total:,} contributions · {active} active days · {current} day current streak · {longest} day longest streak")}</text>
 <g aria-label="Contribution calendar">{''.join(rects)}</g>
 <text x="18" y="{HEIGHT-17}" class="legend-label">Less</text>{legend}<text x="{WIDTH-25}" y="{HEIGHT-17}" class="legend-label" text-anchor="end">More</text>
-<style>.title,.stats,.legend-label{{font-family:"Courier New","Liberation Mono",monospace}}.title{{font-size:13px;font-weight:700;fill:#111827}}.stats{{font-size:10px;fill:#6b7280}}.legend-label{{font-size:9px;fill:#6b7280}}.cell{{opacity:0;transform-box:fill-box;transform-origin:center;animation:reveal .48s cubic-bezier(.2,.7,.2,1) forwards}}@keyframes reveal{{0%{{opacity:0;transform:translate(-10px,-10px) scale(.7)}}100%{{opacity:1;transform:translate(0,0) scale(1)}}}}</style>
+<style>.title,.stats,.legend-label{{font-family:"Courier New","Liberation Mono",monospace}}.title{{font-size:13px;font-weight:700;fill:#e8e6e3}}.stats{{font-size:10px;fill:#8b949e}}.legend-label{{font-size:9px;fill:#8b949e}}.cell{{opacity:0;transform-box:fill-box;transform-origin:center;animation:reveal .48s cubic-bezier(.2,.7,.2,1) forwards}}@keyframes reveal{{0%{{opacity:0;transform:translate(-10px,-10px) scale(.7)}}100%{{opacity:1;transform:translate(0,0) scale(1)}}}}</style>
 </svg>'''
     OUT.write_text(svg,encoding="utf-8"); print(f"Wrote {OUT}")
 if __name__=="__main__": main()
