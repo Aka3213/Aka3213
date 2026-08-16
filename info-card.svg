@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="424" viewBox="0 0 490 424">
+<rect x="1" y="1" width="488" height="422" rx="12" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="1" y="1" width="488" height="42" rx="12" fill="#f3f4f6"/>
+<circle cx="24" cy="22" r="6" fill="#9ca3af"/><circle cx="44" cy="22" r="6" fill="#d1d5db"/><circle cx="64" cy="22" r="6" fill="#e5e7eb"/>
+<text x="92" y="27" class="title">akash@github: ~/profile</text>
+<text x="30" y="72" class="prompt">akash@github ~ $ neofetch</text>
+<line x1="30" y1="88" x2="460" y2="88" stroke="#e5e7eb"/>
+<g class="line" style="animation-delay:0.00s"><text x="30" y="118" class="key">Name</text><text x="118" y="118" class="value">Akash Senthilkumar</text></g><g class="line" style="animation-delay:0.10s"><text x="30" y="152" class="key">Role</text><text x="118" y="152" class="value">AI / Software Engineering</text></g><g class="line" style="animation-delay:0.20s"><text x="30" y="186" class="key">Focus</text><text x="118" y="186" class="value">LLM • RAG • AI Agents</text></g><g class="line" style="animation-delay:0.30s"><text x="30" y="220" class="key">Languages</text><text x="118" y="220" class="value">C • C++ • Java • Python • SQL</text></g><g class="line" style="animation-delay:0.40s"><text x="30" y="254" class="key">AI Stack</text><text x="118" y="254" class="value">Watsonx.ai • LLMs • RAG</text></g><g class="line" style="animation-delay:0.50s"><text x="30" y="288" class="key">Web</text><text x="118" y="288" class="value">React • Next.js • Flask • Node.js</text></g><g class="line" style="animation-delay:0.60s"><text x="30" y="322" class="key">Building</text><text x="118" y="322" class="value">Practical AI applications</text></g>
+<text x="30" y="354" class="section">Highlights</text>
+<text x="30" y="372" class="highlight" style="animation-delay:0.70s">› AI Healthcare / Multi-Agent RAG</text><text x="30" y="394" class="highlight" style="animation-delay:0.80s">› LegacyOps AI / Code Modernization</text><text x="30" y="416" class="highlight" style="animation-delay:0.90s">› AI-powered web applications</text>
+<style>
+.title,.prompt,.key,.value,.section,.highlight{font-family:"Courier New","Liberation Mono",monospace}.title{font-size:14px;fill:#374151;font-weight:700}.prompt{font-size:13px;fill:#111827;font-weight:700}.key{font-size:12px;fill:#6b7280;font-weight:700}.value{font-size:12px;fill:#111827}.section{font-size:12px;fill:#6b7280;font-weight:700}.highlight{font-family:"Courier New","Liberation Mono",monospace;font-size:11px;fill:#374151}.line,.highlight{opacity:0;transform:translateX(-8px);animation:enter .42s ease-out forwards}@keyframes enter{to{opacity:1;transform:translateX(0)}}
+</style></svg>
